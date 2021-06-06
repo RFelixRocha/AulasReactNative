@@ -1,14 +1,17 @@
-import React, { useState } from "react";
-import { Text, TouchableOpacity, View } from "react-native";
+import React, {useState} from 'react';
+import {Text, TouchableOpacity, View} from 'react-native';
 
 import styles from './../style';
 
-const Welcome = (props) => {
+const Welcome = props => {
+  const [description, setDescription] = useState(
+    'Aulas sobre estado dos componentes.',
+  );
 
-  const [description, setDescription] = useState('Aulas sobre estado dos componentes');
-
-  function alternate(){
-    setDescription(description?'':'Aulas sobre a mudança de estado dos componentes')
+  function alternate() {
+    setDescription(
+      description ? '' : 'Aulas sobre a mudança de estado dos componentes',
+    );
   }
 
   return (

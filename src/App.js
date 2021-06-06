@@ -1,12 +1,8 @@
 import React from 'react';
-import Welcome from './components/Welcome';
+import SignIn from './components/SignIn';
 
 const App = () => {
-  return (
-    <Welcome
-    title='React Native'
-    />
-  );
+  return <SignIn />;
 };
 
 export default App;
