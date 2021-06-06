@@ -6,9 +6,10 @@ import {
   DrawerItemList,
 } from '@react-navigation/drawer';
 
-import SignIn from './SignIn';
-import Home from './Home';
+import Icon from 'react-native-vector-icons/FontAwesome5';
+
 import Settings from './Settings';
+import HomeScreen from './HomeScreen';
 
 const Drawer = createDrawerNavigator();
 
@@ -20,19 +21,22 @@ function CustomDrawerContent(props) {
         label="Fechar"
         onPress={() => props.navigation.toggleDrawer()}
       />
+      <DrawerItem
+        label="Logout"
+        onPress={() => props.navigation.toggleDrawer()}
+      />
     </DrawerContentScrollView>
   );
 }
 
-const myDrawer = () => {
+const MyDrawer = () => {
   return (
     <Drawer.Navigator
       drawerContent={props => <CustomDrawerContent {...props} />}>
-      <Drawer.Screen name="Login" component={SignIn} />
-      <Drawer.Screen name="Home" component={Home} />
+      <Drawer.Screen name="Home" component={HomeScreen} />
       <Drawer.Screen name="Configurações" component={Settings} />
     </Drawer.Navigator>
   );
 };
 
-export default myDrawer;
+export default MyDrawer;
