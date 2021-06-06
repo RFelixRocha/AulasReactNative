@@ -1,19 +1,8 @@
 import React from 'react';
-import {
-  Alert,
-  Image,
-  Text,
-  TextInput,
-  TouchableOpacity,
-  View,
-} from 'react-native';
+import {Image, Text, TextInput, TouchableOpacity, View} from 'react-native';
 import styles from '../style';
 
-const SignIn = () => {
-  function alertLogin() {
-    Alert.alert('React Native', 'Acesso permitido.');
-  }
-
+const SignIn = ({navigation}) => {
   return (
     <View style={styles.container}>
       <Image style={styles.logo} source={require('../assets/sigin/logo.png')} />
@@ -23,7 +12,11 @@ const SignIn = () => {
         placeholder="Password:"
         secureTextEntry={true}
       />
-      <TouchableOpacity style={styles.bottomStyle} onPress={alertLogin}>
+      <TouchableOpacity
+        style={styles.bottomStyle}
+        onPress={() => {
+          navigation.navigate('Welcome', {name: 'Bem-Vindo'});
+        }}>
         <Text>Login</Text>
       </TouchableOpacity>
     </View>
