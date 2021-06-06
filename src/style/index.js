@@ -15,6 +15,12 @@ const styles = StyleSheet.create({
     fontSize: 14,
     color: '#ccc',
   },
+  botao: {
+    padding: 10,
+    height: 40,
+    backgroundColor: '#fff',
+    borderRadius: 4
+  }
 });
 
 export default styles;

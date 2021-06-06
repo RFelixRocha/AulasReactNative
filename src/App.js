@@ -5,7 +5,6 @@ const App = () => {
   return (
     <Welcome
     title='React Native'
-    description='Aulas sobre props'
     />
   );
 };
