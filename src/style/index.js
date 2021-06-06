@@ -30,6 +30,11 @@ const styles = StyleSheet.create({
     width: 150,
     borderRadius: 100,
   },
+  logoScreen: {
+    height: 100,
+    width: 100,
+    borderRadius: 100,
+  },
   inputStyle: {
     padding: 10,
     color: '#ccc',
